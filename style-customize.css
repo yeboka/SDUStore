@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: "M PlUS 1", sans-serif;
+}
+
+h3 {
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 3px 3px;
+    line-height: 29px;
+    padding: 0;
+}
+
+h5  {
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 2px 3px;
+    padding: 0;
+}
+
+cost {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 77px;
+    background-color: black;
+    margin-bottom: 37px;
+}
+
+.inner-header {
+    max-width: 1328px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logos img:nth-child(1) {
+    margin-right: 31px;
+    margin-left: 5px;
+}
+
+text {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 16px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+text:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: auto;
+        padding: 7px;
+        overflow-x: hidden;
+    }
+
+    .inner-header {
+        flex-direction: column;
+    }
+
+    .logos {
+        margin-bottom: 10px;
+    }
+}
+
+.wrapper-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1328px;
+    width: 100%;
+}
+
+.row-back {
+    display: flex;
+    align-items: center;
+}
+
+.row-back img {
+    margin-left: 5px;
+    margin-right: 6px;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.product {
+    width: 50%;
+    text-align: center;
+}
+
+.customizer {
+    position: relative;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.info-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.sizes {
+    margin-bottom: 60px;
+}
+
+.label {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+}
+
+.sizes label + label {
+    margin-left: 15px;
+}
+
+input[type="radio"] {
+    opacity: 0; /* hidden but still tabable */
+    position: absolute;
+
+}
+
+.sizes input[type="radio"] + span {
+    color: black;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    padding: 3px 15px;
+    border: 1px solid black;
+}
+
+.sizes input[type="radio"]:checked + span {
+    color: white;
+    background-color: black;
+}
+
+.sizes input[type="radio"]:focus + span {
+    color: #fff;
+}
+
+/*=======================================*/
+
+.colors {
+    margin-bottom: 60px;
+}
+
+.colors input[type="radio"] + span {
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    padding: 3px 15px;
+}
+
+.colors input[type="radio"]:checked + span {
+    padding: 3px 30px; !important;
+}
+
+.colors input[type="radio"]:focus + span {
+
+}
+
+.white {
+    border: 2px solid #545454;
+    color: white;
+    background-color: white;
+}
+.blue {
+    border: 2px solid #203a72;
+    color: #2E4392;
+    background-color: #2E4392;
+}
+.black {
+    border: 2px solid #3f3f3f;
+    color: black;
+    background-color: black;
+}
+
+/*=======================================*/
+
+.like {
+    width: 27px;
+    height: auto;
+    cursor: pointer;
+}
+
+.btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+button {
+    width: 165px;
+    height: 43px;
+    border-radius: 0;
+    border: 1px solid black;
+    background-color: white;
+    transition: .4s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+.buttons button:nth-child(n) {
+    margin: 10px;
+}
+
+/*=====================================*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 100px;
+}
+
+.footer-info {
+    font-size: 12px;
+    color: black;
+}
