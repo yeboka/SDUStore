@@ -38,7 +38,7 @@
                 <div class="customizer">
                     <div class="info-block">
                         <div class="name-info">
-                            <h3>BU’RJEIDE</h3>
+                            <h3 id="product-name">BU’RJEIDE</h3>
                             <h5>HOODIE</h5>
                         </div>
                         <div class="cost-info">
@@ -50,27 +50,27 @@
                         <div class="label">SIZES</div>
                         <form action="" class="form">
                             <label class="material-icons">
-                                <input type="radio" name="mode" checked/>
+                                <input type="radio" name="size" value="XS" checked/>
                                 <span> XS </span>
                             </label>
                             <label  class="material-icons">
-                                <input type="radio" name="mode"/>
+                                <input type="radio" name="size" value="S"/>
                                 <span> S </span>
                             </label>
                             <label  class="material-icons">
-                                <input type="radio" name="mode"/>
+                                <input type="radio" name="size" value="M"/>
                                 <span> M </span>
                             </label>
                             <label  class="material-icons">
-                                <input type="radio" name="mode"/>
+                                <input type="radio" name="size" value="L"/>
                                 <span> L </span>
                             </label>
                             <label  class="material-icons">
-                                <input type="radio" name="mode"/>
+                                <input type="radio" name="size" value="XL"/>
                                 <span> XL </span>
                             </label>
                             <label  class="material-icons">
-                                <input type="radio" name="mode"/>
+                                <input type="radio" name="size" value="XXL"/>
                                 <span> XXL </span>
                             </label>
                         </form>
@@ -80,16 +80,16 @@
                         <div class="label">COLOR</div>
                         <form action="" class="form">
                             <label class="material-icons">
-                                <input type="radio" name="mode" checked/>
+                                <input type="radio" name="color" value="0" checked/>
                                 <span class="black">  XXX </span>
                             </label>
 
                             <label  class="material-icons">
-                                <input type="radio" name="mode"/>
+                                <input type="radio" name="color" value="1"/>
                                 <span class="blue"> XXX </span>
                             </label>
                             <label  class="material-icons">
-                                <input type="radio" name="mode"/>
+                                <input type="radio" name="color" value="2"/>
                                 <span class="white"> XXX </span>
                             </label>
                         </form>
@@ -100,7 +100,7 @@
                             <div class="like">
                                 <img src="assets/heartSVG.svg" alt="like" class="like">
                             </div>
-                            <button>
+                            <button onclick="addToCard()">
                                 ADD TO BASKET
                             </button>
                             <button>
@@ -121,5 +121,6 @@
             <p>QAZAQ REPUBLIC x SDU</p>
         </div>
     </footer>
+    <script src="customizer-logic.js"></script>
 </body>
 </html>

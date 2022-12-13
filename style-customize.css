@@ -186,10 +186,6 @@ input[type="radio"] {
     padding: 3px 30px; !important;
 }
 
-.colors input[type="radio"]:focus + span {
-
-}
-
 .white {
     border: 2px solid #545454;
     color: white;
@@ -236,8 +232,13 @@ button {
     transition: .4s;
 }
 
-button:hover {
+button:hover, .like:hover {
     transform: scale(1.03);
+}
+
+button:active, .like:active {
+    transform: scale(1);
+    transition: 0.1s;
 }
 
 .buttons button:nth-child(n) {
