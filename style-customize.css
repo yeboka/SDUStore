@@ -65,8 +65,8 @@ text:hover {
 @media only screen and (max-width: 600px) {
     header {
         height: auto;
-        padding: 7px;
-        overflow-x: hidden;
+        padding: 7px 0;
+        /*overflow-x: hidden;*/
     }
 
     .inner-header {
@@ -257,7 +257,95 @@ footer {
     height: 100px;
 }
 
+.inner-footer {
+    max-width: 1328px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .footer-info {
     font-size: 12px;
     color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .customizer {
+        width: 60%;
+        height: 500px;
+    }
+
+    footer {
+        position: relative;
+    }
+    .inner-footer {
+        max-width: 500px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .product-img {
+        max-width: 350px;
+    }
+
+    .sizes form {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100px;
+    }
+
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h5  {
+        font-size: 12px;
+    }
+
+    cost {
+        font-size: 15px;
+    }
+
+    .cost-info {
+        margin-top: 3px;
+    }
+
+    .buttons button{
+        width: 100px;
+        font-size: 10px;
+    }
+
+    .colors input[type="radio"] + span {
+        padding: 3px 10px;
+    }
+
+    .colors input[type="radio"]:checked + span {
+        padding: 3px 20px; !important;
+    }
+
+    .inner-footer {
+        font-size: 15px;
+    }
+
+    .inner-footer:last-child {
+        padding-right: 5px;
+    }
+
+    .footer-info {
+        font-size: 10px;
+        padding-left: 5px;
+    }
 }

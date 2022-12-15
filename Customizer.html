@@ -33,7 +33,7 @@
             </div>
             <div class="content">
                 <div class="product">
-                    <img src="assets/blueHoodie.png" alt="product image">
+                    <img id="p-img" class="product-img" src="assets/closes/black-hoodie.png" alt="product image">
                 </div>
                 <div class="customizer">
                     <div class="info-block">
@@ -80,16 +80,16 @@
                         <div class="label">COLOR</div>
                         <form action="" class="form">
                             <label class="material-icons">
-                                <input type="radio" name="color" value="0" checked/>
+                                <input onclick="changeColor(this)" type="radio" name="color" value="0" checked/>
                                 <span class="black">  XXX </span>
                             </label>
 
                             <label  class="material-icons">
-                                <input type="radio" name="color" value="1"/>
+                                <input onclick="changeColor(this)" type="radio" name="color" value="1"/>
                                 <span class="blue"> XXX </span>
                             </label>
                             <label  class="material-icons">
-                                <input type="radio" name="color" value="2"/>
+                                <input onclick="changeColor(this)" type="radio" name="color" value="2"/>
                                 <span class="white"> XXX </span>
                             </label>
                         </form>
@@ -113,7 +113,7 @@
         </div>
     </div>
     <footer>
-        <div class="inner-header">
+        <div class="inner-footer">
             <div class="footer-info">
                 <p>FINAL PROJECT 2022 WEB</p>
                 <p>AKNIET    MERUYERT    YERBOLAT</p>

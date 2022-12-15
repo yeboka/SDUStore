@@ -1,4 +1,5 @@
 
+const hoodies = ["assets/closes/black-hoodie.png", "assets/closes/blueHoodie.png", "assets/closes/white-hoodie.png"]
 function addToCard () {
     const buttons = document.getElementsByTagName("input");
     let product_name = document.getElementById("product-name").innerHTML;
@@ -19,4 +20,10 @@ function addToCard () {
     }
 
     console.log("Product-name: " + product_name + " \nPrice: " + price + " \nSize: " + size + " \nColor: " + color);
+}
+
+function changeColor (e) {
+    let idx = e.value;
+
+    document.getElementById("p-img").src = hoodies[idx];
 }
