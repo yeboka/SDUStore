@@ -4,123 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customizer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style-customize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="inner-header">
-            <div class="logos">
-                <img src="assets/sdu%20logo.png" alt="SDU">
-                <img src="assets/qr%20logo.png" alt="QR">
-            </div>
-            <div class="menu">
-                <text>PRODUCTS</text>
-                <text>BASKET</text>
-                <text>CONTACTS</text>
-                <text>SIGN IN</text>
-            </div>
+<header>
+    <div class="inner-header">
+        <div class="logos">
+            <img src="assets/sdu%20logo.png" alt="SDU">
+            <img src="assets/qr%20logo.png" alt="QR">
         </div>
-    </header>
+        <div class="menu">
+            <text>PRODUCTS</text>
+            <text>BASKET</text>
+            <text>CONTACTS</text>
+            <text>SIGN IN</text>
+        </div>
+    </div>
+</header>
 
-    <div class="wrapper-container">
-        <div class="container">
-            <div class="row-back">
-                <img src="assets/right-arrow%201.png" alt="<---">
-                PRODUCTS
+<div class="wrapper-container">
+    <div class="container">
+        <div class="row-back">
+            <img src="assets/right-arrow%201.png" alt="<---">
+            PRODUCTS
+        </div>
+        <div class="content">
+            <div class="product">
+                <img id="p-img" class="product-img" src="assets/closes/hoodie/hoodie-black-minilogo.jpg"
+                     alt="product image">
             </div>
-            <div class="content">
-                <div class="product">
-                    <img id="p-img" class="product-img" src="assets/closes/black-hoodie.png" alt="product image">
+            <div class="customizer">
+                <div class="info-block">
+                    <div class="name-info">
+                        <h3 id="product-name">BU’RJEIDE</h3>
+                        <h5>HOODIE</h5>
+                    </div>
+                    <div class="cost-info">
+                        <cost>19 900₸</cost>
+                    </div>
                 </div>
-                <div class="customizer">
-                    <div class="info-block">
-                        <div class="name-info">
-                            <h3 id="product-name">BU’RJEIDE</h3>
-                            <h5>HOODIE</h5>
-                        </div>
-                        <div class="cost-info">
-                            <cost>19 900₸</cost>
-                        </div>
-                    </div>
 
-                    <div class="sizes">
-                        <div class="label">SIZES</div>
-                        <form action="" class="form">
-                            <label class="material-icons">
-                                <input type="radio" name="size" value="XS" checked/>
-                                <span> XS </span>
-                            </label>
-                            <label  class="material-icons">
-                                <input type="radio" name="size" value="S"/>
-                                <span> S </span>
-                            </label>
-                            <label  class="material-icons">
-                                <input type="radio" name="size" value="M"/>
-                                <span> M </span>
-                            </label>
-                            <label  class="material-icons">
-                                <input type="radio" name="size" value="L"/>
-                                <span> L </span>
-                            </label>
-                            <label  class="material-icons">
-                                <input type="radio" name="size" value="XL"/>
-                                <span> XL </span>
-                            </label>
-                            <label  class="material-icons">
-                                <input type="radio" name="size" value="XXL"/>
-                                <span> XXL </span>
-                            </label>
-                        </form>
-                    </div>
+                <div class="colors">
 
-                    <div class="colors">
-                        <div class="label">COLOR</div>
-                        <form action="" class="form">
-                            <label class="material-icons">
-                                <input onclick="changeColor(this)" type="radio" name="color" value="0" checked/>
-                                <span class="black">  XXX </span>
-                            </label>
+                    <div class="label">COLOR</div>
+                    <form action="" class="form">
+                        <label class="material-icons">
+                            <input onclick="changeColor(this)" type="radio" name="color" value="0" checked/>
+                            <span class="black">  XXX </span>
+                        </label>
 
-                            <label  class="material-icons">
-                                <input onclick="changeColor(this)" type="radio" name="color" value="1"/>
-                                <span class="blue"> XXX </span>
-                            </label>
-                            <label  class="material-icons">
-                                <input onclick="changeColor(this)" type="radio" name="color" value="2"/>
-                                <span class="white"> XXX </span>
-                            </label>
-                        </form>
-                    </div>
+                        <label class="material-icons">
+                            <input onclick="changeColor(this)" type="radio" name="color" value="1"/>
+                            <span class="blue"> XXX </span>
+                        </label>
+                        <label class="material-icons">
+                            <input onclick="changeColor(this)" type="radio" name="color" value="2"/>
+                            <span class="white"> XXX </span>
+                        </label>
+                    </form>
+                </div>
 
-                    <div class="btn-wrapper">
-                        <div class="buttons">
-                            <div class="like">
-                                <img src="assets/heartSVG.svg" alt="like" class="like">
-                            </div>
-                            <button onclick="addToCard()">
-                                ADD TO BASKET
-                            </button>
-                            <button>
-                                ORDER NOW
-                            </button>
-                        </div>
+                <div class="sizes">
+                    <div class="label">SIZES</div>
+                    <form action="" class="form">
+                        <label class="material-icons">
+                            <input type="radio" name="size" value="XS" checked/>
+                            <span> XS </span>
+                        </label>
+                        <label class="material-icons">
+                            <input type="radio" name="size" value="S"/>
+                            <span> S </span>
+                        </label>
+                        <label class="material-icons">
+                            <input type="radio" name="size" value="M"/>
+                            <span> M </span>
+                        </label>
+                        <label class="material-icons">
+                            <input type="radio" name="size" value="L"/>
+                            <span> L </span>
+                        </label>
+                        <label class="material-icons">
+                            <input type="radio" name="size" value="XL"/>
+                            <span> XL </span>
+                        </label>
+                        <label class="material-icons">
+                            <input type="radio" name="size" value="XXL"/>
+                            <span> XXL </span>
+                        </label>
+                    </form>
+                </div>
+
+                <div class="btn-wrapper">
+                    <div class="buttons">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="36" height="36" viewBox="0 0 256 256" xml:space="preserve">
+                                <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+	                                <path d="M 45 84.334 L 6.802 46.136 C 2.416 41.75 0 35.918 0 29.716 c 0 -6.203 2.416 -12.034 6.802 -16.42 c 4.386 -4.386 10.217 -6.802 16.42 -6.802 c 6.203 0 12.034 2.416 16.42 6.802 L 45 18.654 l 5.358 -5.358 c 4.386 -4.386 10.218 -6.802 16.42 -6.802 c 6.203 0 12.034 2.416 16.42 6.802 l 0 0 l 0 0 C 87.585 17.682 90 23.513 90 29.716 c 0 6.203 -2.415 12.034 -6.802 16.42 L 45 84.334 z M 23.222 10.494 c -5.134 0 -9.961 2 -13.592 5.63 S 4 24.582 4 29.716 s 2 9.961 5.63 13.592 L 45 78.678 l 35.37 -35.37 C 84.001 39.677 86 34.85 86 29.716 s -1.999 -9.961 -5.63 -13.592 l 0 0 c -3.631 -3.63 -8.457 -5.63 -13.592 -5.63 c -5.134 0 -9.961 2 -13.592 5.63 L 45 24.311 l -8.187 -8.187 C 33.183 12.494 28.356 10.494 23.222 10.494 z"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <button onclick="addToCard()">
+                            ADD TO BASKET
+                        </button>
+                        <button>
+                            ORDER NOW
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="inner-footer">
-            <div class="footer-info">
-                <p>FINAL PROJECT 2022 WEB</p>
-                <p>AKNIET    MERUYERT    YERBOLAT</p>
-            </div>
-            <p>QAZAQ REPUBLIC x SDU</p>
+</div>
+<footer>
+    <div class="inner-footer">
+        <div class="footer-info">
+            <p>FINAL PROJECT 2022 WEB</p>
+            <p>AKNIET MERUYERT YERBOLAT</p>
         </div>
-    </footer>
-    <script src="customizer-logic.js"></script>
+        <p>QAZAQ REPUBLIC x SDU</p>
+    </div>
+</footer>
+<script src="customizer-logic.js"></script>
 </body>
 </html>

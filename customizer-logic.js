@@ -1,5 +1,5 @@
 
-const hoodies = ["assets/closes/black-hoodie.png", "assets/closes/blueHoodie.png", "assets/closes/white-hoodie.png"]
+const hoodies = ["assets/closes/hoodie/hoodie-black-minilogo.jpg", "assets/closes/hoodie/hoodie-blue-minilogo.jpg", "assets/closes/hoodie/hoodie-white-minilogo.jpg"]
 function addToCard () {
     const buttons = document.getElementsByTagName("input");
     let product_name = document.getElementById("product-name").innerHTML;

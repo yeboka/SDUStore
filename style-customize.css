@@ -34,6 +34,7 @@ header {
     height: 77px;
     background-color: black;
     margin-bottom: 37px;
+    padding-top: 5px;
 }
 
 .inner-header {
@@ -108,6 +109,10 @@ text:hover {
 .product {
     width: 50%;
     text-align: center;
+}
+
+.product-img {
+    width: 100% ;
 }
 
 .customizer {
@@ -232,11 +237,29 @@ button {
     transition: .4s;
 }
 
-button:hover, .like:hover {
-    transform: scale(1.03);
+button:first-child {
+    border: none;
+    width: 43px;
+    height: auto;
 }
 
-button:active, .like:active {
+button:first-child:hover {
+    background-color: white;
+
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+svg:hover {
+    fill: #0d171a;
+    animation: likeRotate 1s;
+    transform: rotateY(180deg);
+}
+
+button:active {
     transform: scale(1);
     transition: 0.1s;
 }
@@ -340,12 +363,16 @@ footer {
         font-size: 15px;
     }
 
-    .inner-footer:last-child {
-        padding-right: 5px;
-    }
-
     .footer-info {
         font-size: 10px;
-        padding-left: 5px;
+    }
+}
+
+@keyframes likeRotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(179deg);
     }
 }
