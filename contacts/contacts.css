@@ -7,7 +7,6 @@ body {
     font-family: sans-serif;
     background-color: #FFF;
 }
-
 header {
     display: flex;
     justify-content: center;
@@ -17,7 +16,6 @@ header {
     margin-bottom: 37px;
     position: fixed;
 }
-
 .inner-header {
     max-width: 1328px;
     width: 100%;
@@ -25,12 +23,10 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 .logos img:nth-child(1) {
     margin-right: 31px;
     margin-left: 5px;
 }
-
 text {
     color: white;
     font-size: 14px;
@@ -39,22 +35,18 @@ text {
     padding-right: 5px;
     cursor: pointer;
 }
-
 text:hover {
     text-decoration: underline;
 }
-
 @media only screen and (max-width: 600px) {
     header {
         height: auto;
         padding: 7px 0;
         /*overflow-x: hidden;*/
     }
-
     .inner-header {
         flex-direction: row;
     }
-
     .logos {
         margin-bottom: 10px;
     }
@@ -63,6 +55,8 @@ text:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 20px;
+    height: 100%;
 }
 .text1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -77,7 +71,9 @@ text:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+}
+.map{
+    margin-top: 0px;
 }
 .part2{
     justify-content: center;
@@ -89,42 +85,51 @@ text:hover {
     flex-direction: row;
     justify-content: center;
 }
-.scroll{
-    width: 100%;
-    height: 412px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+.scroller{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin: 0 10px;
 }
-
 .scroll {
     width: 344px;
-    height: 338px;
-    background-color: #FFF;
-    position: absolute;
+    height: 390px;
     transition: all 0.5s;
-    border-radius: 15x;
+    border-radius: 20x;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 50px 30px auto auto;
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    margin: 30px 20px;
+    
 }
 .scroller #store{
-    font-family: 'M PLUS 1';
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: normal;
     font-size: 30px;
-    text-align: center;
+    text-align: ltr;
     color: #000000;
+    padding: 7px 0;
+    padding-left: 15px;
 }
 .scroll #address{
-    font-family: 'M PLUS 1';
     font-style: normal;
     font-size: 20px;
-    text-align: center;
-    direction: ltr;
+    text-align: ltr;
     color: #000000;
+    padding: 7px 0;
+    padding-left: 15px;
 } 
 .scroll #number{
-    font-family: 'M PLUS 1';
+    font-family: 'Courier New', Courier, monospace;
     font-style: normal;
     font-size: 20px;
-    text-align: center;
+    text-align: ltr;
     color: rgba(130, 123, 123, 0.31);
+    padding: 7px 0;
+    padding-left: 15px;
 }
 .scroll img {
     width: 344px;
@@ -132,43 +137,15 @@ text:hover {
     object-fit: cover;
     border-radius: 10px;
 }
-
-.btn {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    z-index: 10;
-    cursor: pointer;
-    background-color: #fff;
-    font-size: 18px;
-    transition: 0.3s;
-    position: absolute;
-}
-
-.btn:hover {
-    background-color: black;
-    color: white;
-}
-
-.btn-prev {
-    top: 45%;
-    left: 2%;
-}
-
-.btn-next {
-    top: 45%;
-    right: 2%;
-}
 .scroller {
-
-    width: 100%;
-    max-width: 800px;
-    height: 350px;
-    position: relative;
+    height: 450px;
     /*overflow: hidden;  !* <===  *!*/
     border-radius: 15px;
+    width: 100%;
+    box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: ltr;
+    overflow-x: scroll;
 }
 .part3{
     display: flex;
@@ -177,13 +154,10 @@ text:hover {
     align-items: center;
     margin-top: 67px;
 }
-.part3_btn{
-    display: flex;
-}
+
 .part3_text1 .part3_text1 .text .btn_sub{
     display: flex;
     flex-direction: column;
-
 }
 .part3_text1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -193,15 +167,20 @@ text:hover {
     justify-content: center;
 }
 .part3_text2{
-    font-family: monospace;
     font-size: 25px;
     text-align: center;
     color: rgba(33, 33, 33, 0.513);
     justify-content: center;
+    font-family: 'M PLUS 1';
+font-style: normal;
+font-weight: 200;
+}
+.part3_btn{
+    margin-block-end: 28px;
 }
 .part3 input{
     width: 301px;
-    height: 30px;
+    height: 37px;
     background: #EFEFEF;
     border-radius: 10px;
     border: none;
@@ -210,8 +189,8 @@ text:hover {
     font-weight: lighter;
 }
 .btn_sub{
-    width: 181PX;
-    height: 34px;
+    width: 181px;
+    height: 37px;
     border-radius: 10px;
     border: none;
     background: #000000;
@@ -226,9 +205,8 @@ footer {
     background-color: #D9D9D9;
     width: 100%;
     height: 100px;
-    position: absolute;
+    position: relative;
 }
-
 .inner-footer {
     max-width: 1328px;
     width: 100%;
@@ -236,28 +214,23 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
-
 .footer-info {
     font-size: 12px;
     color: black;
 }
-
 @media only screen and (max-width: 1000px) {
     .content {
         flex-direction: row;
         justify-content: center;
     }
-
     .product {
         width: 100%;
         margin-bottom: 15px;
     }
-
     .customizer {
         width: 60%;
         height: 500px;
     }
-
     footer {
         position: relative;
     }
@@ -265,3 +238,67 @@ footer {
         max-width: 500px;
     }
 }
+nav {
+    position: relative;
+    min-width: 350px;
+    min-height: 80px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-radius: 10px;
+    padding: 0 15px;
+    background: black;
+    box-shadow: 0 6.7px 5.3px rgba(0, 0, 0, 0.12), 0 22.3px 17.9px rgba(0, 0, 0, 0.08), 0 100px 80px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  nav ul li a i {
+  color:#fff;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: opacity 100ms ease;
+    pointer-events: none;
+  }
+  nav ul li a.active i{
+    opacity: 1;
+  }
+  nav .tubelight {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: left 400ms ease;
+    z-index: 10;
+  }
+  nav .tubelight .light-ray {
+    position: absolute;
+    left: -30%;
+    top: 5px;
+    width: 160%;
+    height: 80px;
+    clip-path: polygon(5% 100%, 25% 0px, 75% 0px, 95% 100%);
+    background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0.3) -50%,
+    rgba(255, 255, 255, 0) 90%);
+    pointer-events: none;
+  }
+ 
