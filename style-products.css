@@ -194,6 +194,10 @@ footer {
     transition: 0.4s;
 }
 
+.invisible {
+    opacity: 0;
+}
+
 button {
     width: 165px;
     height: 43px;
@@ -248,5 +252,22 @@ button:active {
 
     .footer-info {
         font-size: 10px;
+    }
+
+    .info {
+        justify-content: center;
+    }
+
+    .main-text {
+        font-size: 40px;
+    }
+
+    .item {
+        width: 250px;
+        height: auto;
+    }
+
+    .item img {
+        width: 250px;
     }
 }
