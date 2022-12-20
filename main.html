@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDUStore</title>
+    <title>Main</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav>
-        <div class="navigation">
-            <div class="logs">
-                <img src="img/image 1.svg" alt="" srcset="">
-                <img src="img/image 3.svg" alt="" srcset="">
 
+<body>
+    <header>
+        <div class="inner-header">
+            <div class="logos">
+                <img src="img\image 1.svg" alt="SDU">
+                <img src="img\image 3.svg" alt="QR">
             </div>
-            <div class="nav-lnks">
-                <ul>
-                    <li>PRODUCTS</li>
-                    <li>CONTACTS</li>
-                    <li>BASKET</li>
-                    <li>SIGN IN</li>
-                </ul>
+            <div class="menu">
+                <text>PRODUCTS</text>
+                <text>BASKET</text>
+                <text>CONTACTS</text>
+                <text>SIGN IN</text>
             </div>
         </div>
-    </nav>
+    </header>
 
     <main>
         <div class="main-bg">
@@ -36,44 +34,61 @@
                 <source src="img/vid2.gif" type="video/mp4">
             </video>
         </div>
-        <div class="second-cards">
-            <div class="half-div"></div>
-            <div class="full-div"></div>
-            <div class="half-div"></div>
-        </div>
+
+
+        
+
+
+        
+          
+        <ul class="gallery">
+            <li><img src="img/tshirt-red-textlogo.jpg" alt=""></li>
+            <li><img src="img/burjeide.png" alt=""></li>
+            <li><img src="img/futbolka.png" alt=""></li>
+            <li><img src="img/panama.png" alt=""></li>
+            <li><img src="img/somke.png" alt=""></li>
+        </ul>
+
+
+
+
         <div class="third">
             <div class="first-row">
                 <div>
-                    <img src="C:\Users\Akniet\Desktop\project\img\kenjeide.png" alt="" srcset="">
+                    <a href="PRODUCTS.html"><img src="img\kenjeide.png" alt="" srcset=""></a>
                     <h2>KEN’JEIDE</h2>
                     <p>SWEATSHIRT</p>
                 </div>
                 <div>
-                    <img src="C:\Users\Akniet\Desktop\project\img\burjeide.png" alt="" srcset="">
+                    <a href="PRODUCTS.html"><img src="img\burjeide.png" alt="" srcset=""></a>
                     <h2>BU’RJEIDE</h2>
                     <p>HOODIE</p>
                 </div>
             </div>
+
+
             <div class="second-row">
                 <div>
-                    <img src="C:\Users\Akniet\Desktop\project\img\futbolka.png" alt="" srcset="">
+                    <a href="PRODUCTS.html"><img src="img\futbolka.png" alt="" srcset=""></a>
                     <h2>FUTBOLKA</h2>
                     <p>T-SHIRT</p>
                 </div>
                 <div>
-                    <img src="C:\Users\Akniet\Desktop\project\img\panama.png" alt="" srcset="">
+                    <a href="PRODUCTS.html"><img src="img\panama.png" alt="" srcset=""></a>
                     <h2>BAS KIIM</h2>
                     <p>HEADWEAR</p>
                 </div>
             </div>
+
+
             <div class="third-row">
                 <div>
-                    <img src="C:\Users\Akniet\Desktop\project\img\somke.png" alt="" srcset="">
+                    <a href="PRODUCTS.html"><img src="img\somke.png" alt="" srcset=""></a>
                     <h2>ACCESORIES</h2>
                     <p>SHOPPER</p>
                 </div>
-                
             </div>
+            
         </div>
     </main>
     <footer>
@@ -91,5 +106,37 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        const slider = document.querySelector('.gallery');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', e => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', _ => {
+        isDown = false;
+        slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', _ => {
+        isDown = false;
+        slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const SCROLL_SPEED = 2;
+        const walk = (x - startX) * SCROLL_SPEED;
+        slider.scrollLeft = scrollLeft - walk;
+        });
+
+        </script>
 </body>
 </html>
